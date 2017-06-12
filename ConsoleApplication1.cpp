@@ -10,20 +10,20 @@ char input;
 
 //Input Check is used to collect the input and ensure that it is either y or n. It will loop until either y or n are inputed
 void input_check(char in) {
-			std::cout << "Do You Wish to Lock the Application(Y for Yes, N for No)";
-			char yesOrNo;
-			cin >> yesOrNo;
-			yesOrNo = toupper(yesOrNo);
-			while (yesOrNo != 'Y' && yesOrNo != 'N')
-			{
-				cout << "Error invalid input please try again " << std::endl;
-				cout << "Please enter [Y/N]: ";
-				cin >> yesOrNo;
-				yesOrNo = toupper(yesOrNo);
-			}
-			cout << "You entered " << yesOrNo << std::endl;
-			input = yesOrNo;
-		}
+	std::cout << "Do You Wish to Lock the Application(Y for Yes, N for No)";
+	char yesOrNo;
+	cin >> yesOrNo;
+	yesOrNo = toupper(yesOrNo);
+	while (yesOrNo != 'Y' && yesOrNo != 'N')
+	{
+		cout << "Error invalid input please try again " << std::endl;
+		cout << "Please enter [Y/N]: ";
+		cin >> yesOrNo;
+		yesOrNo = toupper(yesOrNo);
+	}
+		cout << "You entered " << yesOrNo << std::endl;
+		input = yesOrNo;
+}
 
 //If the input selected was "y" then the function will lock, or keep locked, the window and prevent any changes in the application
 //If the input select was "n" then the function will unlock, or keep unlocked, the window and allow chanes in the application
